@@ -10,3 +10,10 @@ setInterval(
   },
   1000
 );
+
+let photoClicked = false;
+const photo = document.querySelector("img.portrait");
+photo.addEventListener("click", () => {
+    photoClicked = !photoClicked;
+    photo.style.width = photoClicked ? "400px" : "300px";
+});
