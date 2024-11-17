@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@700&display=swap");
+
+/* variables */
+
+:root {
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+  --border-radius: 12px;
+  --font-color: #323232;
+}
+
+/* common element */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    color: var(--font-color); 
+}
+
+body {
+    max-width: 900px;
+    margin: 0;
+    margin: 0 auto;
+    padding: 0 var(--spacing-3);
+
+    font-family: "Open Sans", sans-serif;
+    
+    display: flex;
+    flex-direction: column; 
+}
+
+section {
+  padding: var(--spacing-3) 0;
+}
+
+h2 {
+  font-family: "Proza Libre", sans-serif;
+  margin: 0;
+  margin-bottom: var(--spacing-2);
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* navigation bar */
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-3) 0;
+}
+
+.navigation-items {
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.navigation-item {
+    margin: var(--spacing-1);
+}
+
+#logo {
+    margin: 0;
+} 
+
+/* about me */
+
+.portrait {
+  width: 300px;
+  border-radius: var(--border-radius);
+  flex-shrink: 0;
+}
+
+.about-me-container {
+  display: flex;
+}
+
+.about-me-text-container {
+  margin-right: var(--spacing-3);
+}
+
+@media only screen and (max-width: 600px) {
+  .about-me-container {
+    flex-direction: column;
+  }
+}
+
+/* projects  */
+
+details {
+  cursor: pointer;
+}
+
+summary {
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+}
+
+.project-title h3 {
+  display: inline;
+}
+
+.project-image {
+  width: 50%;
+}
+
+/* skills */
+
+#skills-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#skills-container > * {
+  margin-top: var(--spacing-1);
+  font-size: 2em;
+  width: 2em;
+}
+
+/* footer */
+
+footer {
+  margin-top: auto;
+  padding: var(--spacing-2) 0;
+  text-align: center;
+}
+
+.heart {
+  color: red;
+}
+
+/* contact */
+
+.icon {
+  font-size: 2em;
+  color: var(--font-color);
+  margin: 0 var(--spacing-1);
+}
